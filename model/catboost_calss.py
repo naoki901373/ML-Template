@@ -11,7 +11,6 @@ kf = KFold(n_splits = 5, shuffle = True, random_state = 70)
 
 # modeling and training
 for fold, (tr_idx, va_idx) in enumerate(kf.split(train_x)):
-    acc = 0
     print(f'--------fold:{fold+1}--------')
     fold+=1
     tr_x, va_x = train_x.iloc[tr_idx], train_x.iloc[va_idx]
