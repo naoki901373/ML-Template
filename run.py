@@ -54,7 +54,7 @@ def run_training(model, optimizer, scheduler, device, num_epochs):
             print(f"Model Saved{sr_}")
             
         last_model_wts = copy.deepcopy(model.state_dict())
-        PATH = f"last_epoch-{fold:02d}.bin"
+        PATH = f"last_epoch-{fold:02d}.pth"
         torch.save(model.state_dict(), PATH)
             
         print(); print()
